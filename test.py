@@ -7,13 +7,19 @@ from evaluate import *
 # all the valid solutions are 0 and all
 # invalid solutions are greater than 0
 def test_evaluate():
-    valid_solution = [
+
+    assert evaluate([
         [0,1,0,0],
         [0,0,0,1],
         [1,0,0,0],
         [0,0,1,0]
-    ]
+    ]) == 0
 
-    assert evaluate(valid_solution) == 0
+    assert evaluate([
+        [0,0,1,0],
+        [0,0,0,1],
+        [1,0,0,0],
+        [0,0,1,0]
+    ]) != 0
 
 test_evaluate();
