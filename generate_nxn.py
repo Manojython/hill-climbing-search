@@ -1,14 +1,19 @@
-n = int(input("enter the matrix size: "))
-arr = []
+# n = int(input("enter the matrix size: "))
+# arr = []
 
-for i in range(n):
-	temp = []
-	counter = 0
-	while counter<n:
-		temp.append("_")
-		counter+=1
+def generate():
+	board= []
+	n = int(input("enter the matrix size: "))
+	for i in range(n):
+		temp = []
+		counter = 0
+		while counter<n:
+			temp.append("_")
+			counter+=1
 
-	arr.append(temp)
+		board.append(temp)
+
+	return board
 
 
-print(arr)
+# print(arr)
