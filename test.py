@@ -1,7 +1,7 @@
-from hill_climbing import *
+from evaluate import *
 
 # test generate_random_solution
-generate_random_solution()
+# generate_random_solution()
 
 # test the evaluate function, ensure that
 # all the valid solutions are 0 and all
@@ -15,3 +15,5 @@ def test_evaluate():
     ]
 
     assert evaluate(valid_solution) == 0
+
+test_evaluate();
