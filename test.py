@@ -13,13 +13,13 @@ def test_evaluate():
         [0,0,0,1],
         [1,0,0,0],
         [0,0,1,0]
-    ]) == 0
+    ]) == 0, "Valid solution is marked as away from 0"
 
     assert evaluate([
         [0,0,1,0],
         [0,0,0,1],
         [1,0,0,0],
         [0,0,1,0]
-    ]) != 0
+    ]) != 0, "Invalid solution does not represent non-zero evaluation"
 
 test_evaluate();
