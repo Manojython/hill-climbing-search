@@ -1,8 +1,5 @@
 from evaluate import *
 
-# test generate_random_solution
-# generate_random_solution()
-
 # test the evaluate function, ensure that
 # all the valid solutions are 0 and all
 # invalid solutions are greater than 0
@@ -23,13 +20,12 @@ def test_evaluate():
     ]) != 0, "Invalid solution does not represent non-zero evaluation"
 
 def test_horizontalAttacks():
-    assert horizontalAttacks(1, 0,
-        [
-            [1,1,1,1],
-            [0,0,0,0],
-            [0,0,0,0],
-            [0,0,0,0]
-        ]) == 3, "There should be a total of 3 horizontal attacks"
+    assert horizontalAttacks(2, 1, [
+        [0,0,0,0],
+        [0,1,1,1],
+        [0,0,0,0],
+        [0,0,0,0]
+    ]) == 2, "There should be a total of 2 horizontal attacks"
 
 def test_verticalAttacks():
     assert verticalAttacks(1,0, [
@@ -38,6 +34,13 @@ def test_verticalAttacks():
         [0,1,0,0],
         [0,1,0,0]
     ]) == 3, "There should be a total of 3 vertical attacks"
+    
+    assert verticalAttacks(2,1, [
+        [0,0,0,0],
+        [0,0,1,0],
+        [0,0,1,0],
+        [0,0,1,0]
+    ]) == 2, "There should be a total of 2 vertical attacks"
 
 def test_diagonalAttacks():
     assert diagonalAttacks(0,0,[
