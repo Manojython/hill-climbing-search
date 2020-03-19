@@ -84,6 +84,9 @@ def test_reverseDiagonalAttacks():
     ]) == 1, "Total of 1 reverse diagonal attack"
 
 
+
+# Check whether generated matrix is right or wrong
+
 def test():
     test_horizontalAttacks();
     test_verticalAttacks();
