@@ -2,8 +2,8 @@
 # on the board.
 def evaluate(board): 
     attacks = 0
-    for y in range(0, len(board) - 1):
-        for x in range(0, len(board) - 1):
+    for y in range(0, len(board)):
+        for x in range(0, len(board)):
             if (board[y][x] == 1):
                 attacks += horizontalAttacks(x, y, board)
                 attacks += verticalAttacks(x, y, board)
@@ -14,11 +14,11 @@ def evaluate(board):
 # Checks for all attacks that occur in the horizontal direction:
 # 
 # 0 0 0 0
-# 1 1 1 1
+# 1 1 X 1
 # 0 0 0 0
 # 0 0 0 0
 # 
-# Should produce 3 attacks for x,y position 1,2.
+# Should produce 3 attacks for x,y position 2,1.
 def horizontalAttacks(x, y, board):
     attacks = 0
     for i in range(1, len(board)):
@@ -30,10 +30,10 @@ def horizontalAttacks(x, y, board):
 # 
 # 0 1 0 0
 # 0 1 0 0
-# 0 1 0 0
+# 0 X 0 0
 # 0 1 0 0
 # 
-# Should produce 3 attacks for x,y position 2,1.
+# Should produce 3 attacks for x,y position 1,2.
 def verticalAttacks(x, y, board):
     attacks = 0
     for i in range(1, len(board)):
@@ -44,7 +44,7 @@ def verticalAttacks(x, y, board):
 # Checks for all attacks that occur in the diagonal direction:
 # 
 # 0 1 0 0
-# 0 0 1 0
+# 0 0 X 0
 # 0 0 0 1
 # 0 0 0 0
 # 
@@ -77,7 +77,7 @@ def diagonalAttacks(x, y, board):
 # 0 0 0 0
 # 0 0 0 1
 # 0 0 1 0
-# 0 1 0 0
+# 0 X 0 0
 # 
 # Should produce 2 attacks for x,y position 1,3.
 def reverseDiagonalAttacks(x, y, board):
