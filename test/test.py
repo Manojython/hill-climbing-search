@@ -9,6 +9,7 @@ def test_all():
     test_reverseDiagonalAttacks();
     test_evaluate();
     test_best_successor();
+    test_climb();
     test_generate_initial_state();
     test_generate_successors();
 

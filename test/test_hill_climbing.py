@@ -20,3 +20,16 @@ def test_best_successor():
                 [0,0,1,0]
             ]
         ]).cost == 0, "The node with the lowest score (0) should be picked"
+
+def test_climb():
+    assert climb([
+        [0,1,0,0],
+        [0,0,0,1],
+        [1,0,0,0],
+        [0,0,1,0]
+    ]) == [
+        [0,1,0,0],
+        [0,0,0,1],
+        [1,0,0,0],
+        [0,0,1,0]
+    ], "The best successor is simply the current node since it is the goal"
