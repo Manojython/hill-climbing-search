@@ -209,9 +209,18 @@ def test():
     test_generate_successors();
 
 
-matrix  = generate_initial_state(8)
-for i in matrix:
-    print(i,end="\n")
+# matrix  = generate_initial_state(8)
+# for i in matrix:
+#     print(i,end="\n")
+initial_state = [
+        [0,1,0,0],
+        [0,0,0,1],
+        [1,0,1,0],
+        [0,0,0,0]
+    ];
+
+successors = generate_successors(initial_state)
+# print(successors)
 
 try:
     test();
@@ -220,6 +229,4 @@ except:
 
     print("Test cases did not pass")
     sys.exit(0)
-
-
 
