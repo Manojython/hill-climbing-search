@@ -27,6 +27,11 @@ def generate_initial_state(n_queens):
 
 	return return_board
 
+def generate_successors(state):
+	matrix_len = len(state)
+	n_successors = (matrix_len*matrix_len) - matrix_len
+	return 0
+
 
 def generate(n_queens):
 	board= []

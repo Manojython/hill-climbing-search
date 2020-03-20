@@ -92,10 +92,11 @@ def test_reverseDiagonalAttacks():
 def test_generate_initial_state():
     size = 8
     matrix =  generate_initial_state(size)
+    matrix = np.rot90(matrix,axes=(1,0))
     assert len(matrix) == size, "Expected number of rows are not {}".format(size)
     for i in matrix:
         assert len(i) == size, "Expected number of columns are not {}".format(size)
-        assert i.count(1) == 1, "Expected number of 1's is not one"
+        assert list(i).count(1) == 1, "Expected number of 1's is not one"
 
 # Check whether generated matrix is right or wrong
 
