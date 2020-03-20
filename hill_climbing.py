@@ -1,28 +1,17 @@
 from evaluate import *
-import random 
-import string 
- 
-def generate_random_solution(length=13): 
 
-	return [random.choice(string.printable) for _ in range(length)] 
-	 
-def mutate_solution(solution): 
-	index = random.randint(0, len(solution) - 1) 
-	solution[index] = random.choice(string.printable) 
-	 
-best = generate_random_solution() 
-best_score = evaluate(best) 
- 
-while True: 
-	print('Best score so far', best_score, 'Solution', "".join(best)) 
-	 
-	if best_score == 0: 
-		break
-	 
-	new_solution = list(best) 
-	mutate_solution(new_solution) 
-	 
-	score = evaluate(new_solution) 
-	if evaluate(new_solution) < best_score: 
-		best = new_solution 
-		best_score = score
+class Node:
+    board = []
+    cost = 10000
+
+print(Node())
+
+def find_best_successor(successors):
+    best = Node()
+    
+    for successor in successors:
+        if (evaluate(successor) < best.cost):
+            best.board = successor
+            best.cost = evaluate(successor)
+
+    return best
