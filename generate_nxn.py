@@ -5,6 +5,7 @@
 # 1 for queen
 
 import random
+import numpy as np
 
 def generate_initial_state(n_queens):
 	board = []
@@ -20,7 +21,7 @@ def generate_initial_state(n_queens):
 			counter+=1
 
 		board.append(temp)
-	return board
+	return np.rot90(board)
 
 
 def generate(n_queens):

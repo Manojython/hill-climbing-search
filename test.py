@@ -111,10 +111,7 @@ def test():
 matrix  = generate_initial_state(8)
 for i in matrix:
     print(i,end="\n")
-matrix = np.rot90(matrix)
-for i in matrix:
-    print(i,end="\n")
-print("Running test cases")
+
 try:
     test();
     print("Test cases passed")
