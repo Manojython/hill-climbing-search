@@ -29,10 +29,8 @@ def generate_initial_state(n_queens):
 
 def generate_successors(state):
 	matrix_len = len(state)
-
 	n_successors = (matrix_len*matrix_len) - matrix_len
 	state = np.rot90(state,axes=(1,0))
-	# print(state)
 	solution_list = []
 	for i in range(matrix_len):
 		row_name=state[i]
@@ -48,7 +46,6 @@ def generate_successors(state):
 			state[i] = row_state[j]
 			state = np.rot90(state)
 			solution_list.append(state)
-
 
 	return solution_list
 
