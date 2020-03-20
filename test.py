@@ -1,5 +1,7 @@
 from evaluate import *
-
+from generate_nxn import *
+import sys
+import numpy as np
 # test the evaluate function, ensure that
 # all the valid solutions are 0 and all
 # invalid solutions are greater than 0
@@ -87,6 +89,13 @@ def test_reverseDiagonalAttacks():
     ]) == 1, "Total of 1 reverse diagonal attack"
 
 
+def test_generate_initial_state():
+    size = 8
+    matrix =  generate_initial_state(size)
+    assert len(matrix) == size, "Expected number of rows are not {}".format(size)
+    for i in matrix:
+        assert len(i) == size, "Expected number of columns are not {}".format(size)
+        assert i.count(1) == 1, "Expected number of 1's is not one"
 
 # Check whether generated matrix is right or wrong
 
@@ -96,5 +105,23 @@ def test():
     test_diagonalAttacks();
     test_reverseDiagonalAttacks();
     test_evaluate();
+    test_generate_initial_state();
 
-test();
+
+matrix  = generate_initial_state(8)
+for i in matrix:
+    print(i,end="\n")
+matrix = np.rot90(matrix)
+for i in matrix:
+    print(i,end="\n")
+print("Running test cases")
+try:
+    test();
+    print("Test cases passed")
+except:
+
+    print("Test cases did not pass")
+    sys.exit(0)
+
+
+

@@ -4,14 +4,28 @@
 # 0 for not queen
 # 1 for queen
 
+import random
 
-#def generate_initial state(random) 
+def generate_initial_state(n_queens):
+	board = []
+	for i in range(n_queens):
+		queen_place = random.randint(0,n_queens-1)
+		temp = []
+		counter = 0
+		while counter<n_queens:
+			if(counter==queen_place):
+				temp.append(1)
+			else:
+				temp.append(0)
+			counter+=1
 
+		board.append(temp)
+	return board
 
 
 def generate(n_queens):
 	board= []
-	n_queens
+	
 	for i in range(n_queens):
 		temp = []
 		counter = 0
