@@ -21,7 +21,11 @@ def generate_initial_state(n_queens):
 			counter+=1
 
 		board.append(temp)
-	return np.rot90(board)
+		return_board = []
+		for i in np.rot90(board):
+			return_board.append(list(i))
+
+	return return_board
 
 
 def generate(n_queens):
