@@ -55,3 +55,15 @@ def climb_sideways(problem, sideways_moves):
             break
         sideways_count += 1
     return make_final(current.board, steps)
+
+def climb_random_restart(problem, restarts):
+    restart_count = 0
+    current  = climb(problem)
+    steps = current.steps
+    while(restart_count < restarts):
+        current = climb(generate_initial_state(len(problem)))
+        steps += current.steps
+        if (current.IsSuccess()):
+            break
+        restart_count += 1
+    return make_final(current.board, steps)
