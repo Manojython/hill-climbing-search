@@ -29,7 +29,7 @@ def generate_initial_state(n_queens):
     return return_board
 
 def generate_successors(state):
-    solution_list = []
+    successors = []
     for i in range(len(state)):
         for j in range(len(state)):
             local_state = copy.deepcopy(state)
@@ -38,9 +38,8 @@ def generate_successors(state):
                 
             local_state[j][i] = 1
             if (local_state != state):
-                solution_list.append(local_state)
-
-    return solution_list
+                successors.append(local_state)
+    return successors
 
 
 def generate(n_queens):
