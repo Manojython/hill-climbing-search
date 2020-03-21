@@ -43,7 +43,7 @@ def generate_successors(state):
 
 
 def generate(n_queens):
-    board= []
+    board = []
     
     for i in range(n_queens):
         temp = []
@@ -55,6 +55,3 @@ def generate(n_queens):
         board.append(temp)
 
     return board
-
-
-# print(arr)
