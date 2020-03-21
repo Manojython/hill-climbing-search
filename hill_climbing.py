@@ -3,7 +3,7 @@ from generate_nxn import *
 
 class Node:
     board = []
-    cost = 9223372036854775807
+    cost = float("inf")
 
 def make_node(board):
     node = Node()
