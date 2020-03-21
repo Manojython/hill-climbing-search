@@ -112,3 +112,36 @@ def test_generate_successors():
         [1,0,1,0],
         [0,0,0,1]
     ]) == 1, "Expected the successor for the 4th column of the 3rd iteration to be included"
+
+def test_generate_sideways_successors():
+    initial_state = [
+        [0,1,0,0],
+        [0,0,0,0],
+        [1,0,1,0],
+        [0,0,0,1]
+    ];
+
+    successors = generate_sideways_successors(initial_state);
+
+    assert len(successors) == 3, "For a 4x4 board there should be 3 sideways successors";
+
+    assert successors.count([
+        [1,0,0,0],
+        [0,0,0,0],
+        [0,1,0,1],
+        [0,0,1,0]
+    ]) == 1, "Expected successor for shifting 1"
+
+    assert successors.count([
+        [0,0,0,1],
+        [0,0,0,0],
+        [1,0,1,0],
+        [0,1,0,0]
+    ]) == 1, "Expected successor for shifting 2"
+
+    assert successors.count([
+        [0,0,1,0],
+        [0,0,0,0],
+        [0,1,0,1],
+        [1,0,0,0]
+    ]) == 1, "Expected successor for shifting 3"

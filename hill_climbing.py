@@ -42,3 +42,16 @@ def climb(problem):
         if (neighbor.cost >= current.cost):
             return make_final(current.board, steps)
         current = neighbor
+
+def climb_sideways(problem, sideways_moves):
+    sideways_count = 0
+    current  = climb(problem)
+    steps = current.steps
+    while(sideways_count < sideways_moves):
+        current = climb(find_best_successor(
+            generate_sideways_successors(current.board)).board)
+        steps += current.steps
+        if (current.IsSuccess()):
+            break
+        sideways_count += 1
+    return make_final(current.board, steps)

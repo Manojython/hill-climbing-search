@@ -41,6 +41,19 @@ def generate_successors(state):
                 successors.append(local_state)
     return successors
 
+def generate_sideways_successors(state):
+    successors = []
+    translated_state = copy.deepcopy(state)
+    for i in range(len(state) - 1):
+        for j in range(len(state)):
+            # rotate each row
+            temp = translated_state[j][0]
+            for k in range(len(state) - 1):
+                translated_state[j][k] = translated_state[j][k + 1]
+            translated_state[j][len(state) - 1] = temp
+        successors.append(copy.deepcopy(translated_state))
+    return successors
+
 
 def generate(n_queens):
     board = []

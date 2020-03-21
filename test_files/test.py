@@ -12,3 +12,4 @@ def test_all():
     test_climb();
     test_generate_initial_state();
     test_generate_successors();
+    test_generate_sideways_successors();
