@@ -1,6 +1,6 @@
-from test_evaluate import *
-from test_generate import *
-from test_hill_climbing import *
+from test_files.test_evaluate import *
+from test_files.test_generate import *
+from test_files.test_hill_climbing import *
 
 def test_all():
     test_horizontalAttacks();
@@ -12,5 +12,3 @@ def test_all():
     test_climb();
     test_generate_initial_state();
     test_generate_successors();
-
-test_all();
