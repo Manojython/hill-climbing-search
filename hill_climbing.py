@@ -1,3 +1,4 @@
+import random
 from evaluate import *
 from generate_nxn import *
 
@@ -32,6 +33,10 @@ def find_best_successor(successors):
 
     return best
 
+def find_random_successor(successors):
+    index = random.randint(0, len(successors) - 1)
+    return make_node(successors[index])
+
 def climb(problem):
     current = make_node(problem)
     steps = 0
@@ -48,7 +53,7 @@ def climb_sideways(problem, sideways_moves):
     current  = climb(problem)
     steps = current.steps
     while(sideways_count < sideways_moves):
-        current = climb(find_best_successor(
+        current = climb(find_random_successor(
             generate_sideways_successors(current.board)).board)
         steps += current.steps
         if (current.IsSuccess()):

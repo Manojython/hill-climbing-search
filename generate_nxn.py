@@ -43,15 +43,18 @@ def generate_successors(state):
 
 def generate_sideways_successors(state):
     successors = []
-    translated_state = copy.deepcopy(state)
     for i in range(len(state) - 1):
-        for j in range(len(state)):
-            # rotate each row
-            temp = translated_state[j][0]
-            for k in range(len(state) - 1):
-                translated_state[j][k] = translated_state[j][k + 1]
-            translated_state[j][len(state) - 1] = temp
-        successors.append(copy.deepcopy(translated_state))
+        for j in range(i, len(state)):
+            # Don't need to swap two columns that are equal
+            if (i == j): continue; 
+
+            temp_state = copy.deepcopy(state)
+            for k in range(len(state)):
+                temp = temp_state[k][i]
+                temp_state[k][i] = temp_state[k][j]
+                temp_state[k][j] = temp
+
+            successors.append(temp_state)
     return successors
 
 

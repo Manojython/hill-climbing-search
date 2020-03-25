@@ -115,33 +115,60 @@ def test_generate_successors():
 
 def test_generate_sideways_successors():
     initial_state = [
+        [1,0,0,0],
         [0,1,0,0],
-        [0,0,0,0],
-        [1,0,1,0],
+        [0,0,1,0],
         [0,0,0,1]
     ];
 
     successors = generate_sideways_successors(initial_state);
 
-    assert len(successors) == 3, "For a 4x4 board there should be 3 sideways successors";
+    assert len(successors) == 6, "For a 4x4 board there should be 6 sideways successors from the current successor";
 
+    # 1 with 2
     assert successors.count([
+        [0,1,0,0],
         [1,0,0,0],
-        [0,0,0,0],
-        [0,1,0,1],
-        [0,0,1,0]
-    ]) == 1, "Expected successor for shifting 1"
+        [0,0,1,0],
+        [0,0,0,1]
+    ]) == 1, "The sideways successors list should contain a swap of column 1 with column 2"
 
-    assert successors.count([
-        [0,0,0,1],
-        [0,0,0,0],
-        [1,0,1,0],
-        [0,1,0,0]
-    ]) == 1, "Expected successor for shifting 2"
-
+    # 1 with 3
     assert successors.count([
         [0,0,1,0],
-        [0,0,0,0],
-        [0,1,0,1],
+        [0,1,0,0],
+        [1,0,0,0],
+        [0,0,0,1]
+    ]) == 1, "The sideways successors list should contain a swap of column 1 with column 3"
+
+    # 1 with 4
+    assert successors.count([
+        [0,0,0,1],
+        [0,1,0,0],
+        [0,0,1,0],
         [1,0,0,0]
-    ]) == 1, "Expected successor for shifting 3"
+    ]) == 1, "The sideways successors list should contain a swap of column 1 with column 4"
+
+    # 2 with 3
+    assert successors.count([
+        [1,0,0,0],
+        [0,0,1,0],
+        [0,1,0,0],
+        [0,0,0,1]
+    ]) == 1, "The sideways successors list should contain a swap of column 2 with column 3"
+
+    # 2 with 4
+    assert successors.count([
+        [1,0,0,0],
+        [0,0,0,1],
+        [0,0,1,0],
+        [0,1,0,0]
+    ]) == 1, "The sideways successors list should contain a swap of column 2 with column 4"
+
+    # 3 with 4
+    assert successors.count([
+        [1,0,0,0],
+        [0,1,0,0],
+        [0,0,0,1],
+        [0,0,1,0]
+    ]) == 1, "The sideways successors list should contain a swap of column 3 with column 4"

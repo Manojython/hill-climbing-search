@@ -29,31 +29,31 @@ def print_statistics(cases):
     print("Average steps for success: ", success_output)
     print("Average steps for failure: ", failure_output)
 
-def run_hill_climbing(amount):
+def run_hill_climbing(amount, size):
     print("Running", amount, "cases for hill climbing")
     cases = []
     for i in range(amount):
-        cases.append(climb(generate_initial_state(8)))
+        cases.append(climb(generate_initial_state(size)))
     print_statistics(cases)
 
-def run_hill_climbing_sideways(amount, sideways_amount):
+def run_hill_climbing_sideways(amount, sideways_amount, size):
     print("Running", amount, "cases for sideways move with", sideways_amount, "steps")
     cases = []
     for i in range(amount):
         cases.append(
             climb_sideways(
-                generate_initial_state(8),
+                generate_initial_state(size),
                 sideways_amount)
             )
     print_statistics(cases)
 
-def run_hill_climbing_random_restart(amount, restarts):
+def run_hill_climbing_random_restart(amount, restarts, size):
     print("Running", amount, "cases for random restart move with", restarts, "restarts")
     cases = []
     for i in range(amount):
         cases.append(
             climb_random_restart(
-                generate_initial_state(8),
+                generate_initial_state(size),
                 restarts)
             )
     print_statistics(cases)
@@ -61,6 +61,11 @@ def run_hill_climbing_random_restart(amount, restarts):
 test.test_all()
 print("Test cases passed")
 
-run_hill_climbing(500)
-run_hill_climbing_sideways(100, 100)
-run_hill_climbing_random_restart(100, 100)
+
+amount = 100
+board_size = 8
+
+run_hill_climbing(amount, board_size)
+run_hill_climbing_sideways(amount, 25, board_size)
+run_hill_climbing_random_restart(amount, 25, board_size)
+
