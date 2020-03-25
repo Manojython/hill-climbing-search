@@ -69,8 +69,8 @@ def run_evaluation():
     run_hill_climbing_random_restart(amount, restarts, board_size)
 
 def get_size_input():
-    size = input("What is the size you want to test?:")
-    amount = input("How many restarts do you want to have?:")
+    size = int(input("What is the size you want to test?:"))
+    amount = int(input("How many restarts do you want to have?:"))
     run_hill_climbing_random_restart(1, amount, size)
 
 test.test_all()
