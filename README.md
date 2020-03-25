@@ -1,3 +1,11 @@
+# What to do:
+
+Your program should be well documented, and you should turn in the following in hard copy:
+
+1. An  external  documentation  describing  the n-queens  formulation,  the  program  structure,  global variables,  the  function/procedure  to  compute  the  heuristic  function,  and  other  functions/procedures, etc.
+2. Your program source codes (with necessary inline documentation);
+3. The execution results as specified above.
+
 # hill-climbing-search
 
 Hill Climbing implementation 
