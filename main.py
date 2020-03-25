@@ -58,14 +58,29 @@ def run_hill_climbing_random_restart(amount, restarts, size):
             )
     print_statistics(cases)
 
+def run_evaluation():
+    amount = 100
+    sideways_amount = 25
+    restarts = 25
+    board_size = 8
+
+    run_hill_climbing(amount, board_size)
+    run_hill_climbing_sideways(amount, sideways_amount, board_size)
+    run_hill_climbing_random_restart(amount, restarts, board_size)
+
+def get_size_input():
+    size = input("What is the size you want to test?:")
+    amount = input("How many restarts do you want to have?:")
+    run_hill_climbing_random_restart(1, amount, size)
+
 test.test_all()
 print("Test cases passed")
 
-amount = 100
-sideways_amount = 25
-restarts = 25
-board_size = 8
+run_evaluation = input("Run evaluation or run a single size (eval/single)?")
+if (run_evaluation == 'eval'):
+    run_evaluation()
+elif (run_evaluation == 'single'): 
+    get_size_input()
+else:
+    print("Nothing will be done")
 
-run_hill_climbing(amount, board_size)
-run_hill_climbing_sideways(amount, sideways_amount, board_size)
-run_hill_climbing_random_restart(amount, restarts, board_size)
