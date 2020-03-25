@@ -61,6 +61,6 @@ def run_hill_climbing_random_restart(amount, restarts):
 test.test_all()
 print("Test cases passed")
 
-run_hill_climbing(100)
+run_hill_climbing(500)
 run_hill_climbing_sideways(100, 100)
 run_hill_climbing_random_restart(100, 100)
