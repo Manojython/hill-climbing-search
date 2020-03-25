@@ -61,11 +61,11 @@ def run_hill_climbing_random_restart(amount, restarts, size):
 test.test_all()
 print("Test cases passed")
 
-
 amount = 100
+sideways_amount = 25
+restarts = 25
 board_size = 8
 
 run_hill_climbing(amount, board_size)
-run_hill_climbing_sideways(amount, 25, board_size)
-run_hill_climbing_random_restart(amount, 25, board_size)
-
+run_hill_climbing_sideways(amount, sideways_amount, board_size)
+run_hill_climbing_random_restart(amount, restarts, board_size)
