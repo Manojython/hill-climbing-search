@@ -56,18 +56,3 @@ def generate_sideways_successors(state):
 
             successors.append(temp_state)
     return successors
-
-
-def generate(n_queens):
-    board = []
-    
-    for i in range(n_queens):
-        temp = []
-        counter = 0
-        while counter<n_queens:
-            temp.append("_")
-            counter+=1
-
-        board.append(temp)
-
-    return board
