@@ -35,6 +35,17 @@ The subfolder test_files contains all the respective test cases that run before 
 ```
 # hill-climbing-search
 
+ Hill climbing search is an optimization technique which belongs to category of Informed Search strategy. It is an iterative algorithm that starts with an arbitrary solution to a problem, then attempts to find a better solution by making incremental changes to the solution. If the increment produces a better solution, it proceeds with the incrementing until the best solution is found.
+
+The steps involved in a Hill Climbing Search is as follows:
+- Evaluate the initial state, if it is goal state then return success and Stop
+- Loop Until a solution is found or there is no new operator left to apply
+- Select and apply an operator to the current state
+- Check new state:
+- - If it is goal state, then return success and quit 
+- - If it is better than the current state then assign new state as a current state
+- - If not better than the current state, then proceed to the next loop or iteration until 		solution is found
+
 Hill Climbing implementation 
 
 ## Hill Climbing Results
