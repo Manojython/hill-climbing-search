@@ -6,6 +6,14 @@ Your program should be well documented, and you should turn in the following in 
 2. Your program source codes (with necessary inline documentation);
 3. The execution results as specified above.
 
+# N-Queens problem formulation
+The N-Queens problem is a NP-Complete problem. The problem is to find the arrangement of N queens on an NxN chess board, such that no queen can attack any other queens on the board. The chess queens can attack in any direction as horizontal, vertical, horizontal and diagonal way. The attacks can also be direct or indirect. 
+   { 0,  👑,  0,  0}
+   { 0,  0,  0,  👑}
+   { 👑,  0,  0,  0}
+   { 0,  0,  👑,  0}
+
+The above board represents a 4x4 board such that no queens attack each other.
 # hill-climbing-search
 
 Hill Climbing implementation 
