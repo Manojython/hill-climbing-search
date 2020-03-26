@@ -10,12 +10,10 @@ Your program should be well documented, and you should turn in the following in 
 # N-Queens problem formulation
 The N-Queens problem is a NP-Complete problem. The problem is to find the arrangement of N queens on an NxN chess board, such that no queen can attack any other queens on the board. The chess queens can attack in any direction as horizontal, vertical, horizontal and diagonal way. The attacks can also be direct or indirect. 
 ```	
-<div align="center">
    { 0,  👑,  0,  0}
    { 0,  0,  0,  👑}
    { 👑,  0,  0,  0}
    { 0,  0,  👑,  0}
-</div>
 ```
 The above board represents a 4x4 board such that no queens attack each other. In our project, we have tried to use the column-wise movement, sideways movement method and also the Random restart methodologies to achieve the solution.
 
