@@ -18,8 +18,21 @@ The N-Queens problem is a NP-Complete problem. The problem is to find the arrang
 The above board represents a 4x4 board such that no queens attack each other. In our project, we have tried to use the column-wise movement, sideways movement method and also the Random restart methodologies to achieve the solution.
 
 # The Program structure
+The programs for defining and generating the NxN chess board and also the other files which include the hill-climbing algorithms and the test cases are listed as below.
+All the functions are called inside of the main.py file which runs once the test cases are generated. The logic for hillclimbing is defined in the hill_climbing.py and the generated state is once again evaluated by the evaluate.py file.
+The subfolder test_files contains all the respective test cases that run before the User inputs the values for generating the N-Queens board.
+```
+├──test_files
+│   ├── test.py
+│   ├── test_evaluate.py
+│   ├── test_generate.py
+│   └── test_hill_climbing.py
+├── evaluate.py
+├── generate_nxn.py
+├── hill_climbing.py
+└── main.py
 
-
+```
 # hill-climbing-search
 
 Hill Climbing implementation 

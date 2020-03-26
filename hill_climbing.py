@@ -85,7 +85,7 @@ def climb_outside(
     setattr(final, attribute_count_name, count)
     return final
 
-##### SIDWAYS #####
+##### SIDEWAYS #####
 def climb_sideways_outside_call(node, amount):
     return climb(
         find_random_successor(
@@ -102,7 +102,7 @@ def climb_sideways(problem, sideways_moves):
         100,
         'sideways'
     )
-##### SIDWAYS END #####
+##### SIDEWAYS END #####
 
 ##### RANDOM RESTART #####
 def climb_random_restart_outside_call(node, amount):
