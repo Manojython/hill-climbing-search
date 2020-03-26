@@ -1,3 +1,4 @@
+#### By Christian Micklisch 🐴 Manoj Krishna Mohan
 # What to do:
 
 Your program should be well documented, and you should turn in the following in hard copy:
@@ -14,7 +15,11 @@ The N-Queens problem is a NP-Complete problem. The problem is to find the arrang
    { 👑,  0,  0,  0}
    { 0,  0,  👑,  0}
 ```
-The above board represents a 4x4 board such that no queens attack each other.
+The above board represents a 4x4 board such that no queens attack each other. In our project, we have tried to use the column-wise movement, sideways movement method and also the Random restart methodologies to achieve the solution.
+
+# The Program structure
+
+
 # hill-climbing-search
 
 Hill Climbing implementation 
