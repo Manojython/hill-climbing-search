@@ -1,5 +1,4 @@
 #### By Christian Micklisch 🐴 Manoj Krishna Mohan
-# What to do:
 
 # N-Queens problem formulation
 The N-Queens problem is a NP-Complete problem. The problem is to find the arrangement of N queens on an NxN chess board, such that no queen can attack any other queens on the board. The chess queens can attack in any direction as horizontal, vertical, horizontal and diagonal way. The attacks can also be direct or indirect. 
