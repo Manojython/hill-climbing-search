@@ -42,7 +42,7 @@ The steps involved in a Hill Climbing Search is as follows:
 # Global Variables
 
 In this project, we define few Global Variables that require input from the USER. We first ask the USER, if he wants to run a Evaluation on the 8-QUEENS puzzle or if he wants to run a *Hill Climibing Search* on a single matrix of values. We also let the USER input his own size for which the search has to be performed.
-In the Evaluation, we have a fixed amount of runs, i.e **100** and the number of **sideways_move** as mentioned in the lecture to be limited to **25**. The board size is also fixed to be a 8x8 board with **8 Queens**.
+In the Evaluation, we have a fixed amount of runs, i.e **100** and the number of **sideways_move** as mentioned in the lecture to be limited to **100**. The board size is also fixed to be a 8x8 board with **8 Queens**.
 ```
 def run_evaluation():
 
