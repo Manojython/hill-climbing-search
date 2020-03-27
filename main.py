@@ -52,15 +52,15 @@ def print_statistics(cases, print_case_count):
     print("Rate of success: ", successes / len(cases))
     print("Rate of failure: ", failures / len(cases))
 
-    success_output = "Unkown"
-    success_sideways_output = "Unkown"
-    success_restarts_output = "Unkown"
+    success_output = "Unknown"
+    success_sideways_output = "Unknown"
+    success_restarts_output = "Unknown"
     if (successes > 0):
         success_output = total_successful_steps / successes
         success_sideways_output = total_successful_sideways / successes
         success_restarts_output = total_successful_restarts / successes
         
-    failure_output = "Unkown"
+    failure_output = "Unknown"
     if (failures > 0):
         failure_output = total_failed_steps / failures
 
@@ -113,16 +113,16 @@ def run_hill_climbing_random_restart_sideways(amount, restarts, size):
 
 def run_evaluation():
 
-    amount = 100
+    amount = 500
     sideways_amount = 25
-    restarts = 25
+    restarts = 100
     board_size = 8
     
     print("Running evaluation for 8-queens problem at,", amount,"unique cases")
 
-    run_hill_climbing(amount, board_size)
-    run_hill_climbing_sideways(amount, sideways_amount, board_size)
-    run_hill_climbing_random_restart(amount, restarts, board_size)
+    # run_hill_climbing(amount, board_size)
+    # run_hill_climbing_sideways(amount, sideways_amount, board_size)
+    # run_hill_climbing_random_restart(amount, restarts, board_size)
     run_hill_climbing_random_restart_sideways(amount, restarts, board_size)
 
 def get_size_input():
