@@ -1,3 +1,7 @@
+The 25 random restarts and sideways moves is arbitrary, I dont know what the slides mentioned. I think it was actaully 100
+
+Include the random restart with sideways moves outputs, and include how many restarts and sideways moves occurr. Use the results from the output on the bottom.
+
 #### By Christian Micklisch 🐴 Manoj Krishna Mohan
 
 # N-Queens problem formulation
