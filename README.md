@@ -80,6 +80,40 @@ The random restart is again improvised with the ```climb_random_restart_sideways
 The actual rate of success without sideways move is around 14%.
 Whereas with sideways included, the rate of success increases to 94%
 
+The number of steps taken for a hill climibing search for 25-Queens and the rate of success is given below:
+
+```
+- - - - - - - - - - - - - - - - - - Q - - - - - - 
+- - Q - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - Q - - 
+- - - - - Q - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - Q - - - - - - - 
+- - - - - - - - - - - - - - Q - - - - - - - - - - 
+- - - - - - Q - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - Q - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - Q - - - - - 
+- - - - - - - - - - - - - - - - Q - - - - - - - - 
+- - - Q - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - Q - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - Q 
+- - - - - - - - - - Q - - - - - - - - - - - - - - 
+- Q - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - Q - 
+Q - - - - - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - Q - - - - - - - - - - - - - 
+- - - - Q - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - Q - - - - - - - - - - - - - - - - - 
+- - - - - - - - - Q - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - Q - - - - 
+- - - - - - - - - - - - Q - - - - - - - - - - - - 
+- - - - - - - - Q - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - Q - - - - - - - - - 
+```
+
+Rate of success:  1.0
+Rate of failure:  0.0
+Average steps for success:  411.0
+
 Below is the results that were obtained with the hill climbing algorithm:
 
 ## Hill Climbing Results
