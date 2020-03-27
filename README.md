@@ -81,7 +81,7 @@ The random restart is again improvised with the ```climb_random_restart_sideways
 The actual rate of success without sideways move is around 14%.
 Whereas with sideways included, the rate of success increases to 94%
 
-Below 
+Below is the results that were obtained with the hill climbing algorithm:
 
 ## Hill Climbing Results
 ```
@@ -1817,3 +1817,6 @@ Average steps for failure:  Unkown
 Average steps for success sideways:  8.41
 Average steps for success restarts:  0.71
 ```
+# References and Citations:
+ - Notes from the Lecture by Prof. Dewan
+ - Artificial Intelligence: A Modern Approach by Stuart Russell, Peter Norvig
