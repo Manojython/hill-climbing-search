@@ -1819,3 +1819,5 @@ Average steps for success restarts:  0.71
 # References and Citations:
  - Notes from the Lecture by Prof. Dewan
  - Artificial Intelligence: A Modern Approach by Stuart Russell, Peter Norvig
+ - https://en.wikipedia.org/wiki/Hill_climbing
+ - https://www.javatpoint.com/hill-climbing-algorithm-in-ai
