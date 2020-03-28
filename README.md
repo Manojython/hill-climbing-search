@@ -1,5 +1,17 @@
 #### By Christian Micklisch 🐴 Manoj Krishna Mohan
 
+# Instructions to run the code:
+- Our project runs in Python3.8 environment
+- We have made use of the python-numpy package for easing our task, it can be installed with the below command:
+```
+pip3 install numpy
+```
+- To run the Project, please use the below command:
+```
+python main.py
+```
+- All the test cases Run initially, then later it asks for the input from USER.
+
 # N-Queens problem formulation
 The N-Queens problem is a NP-Complete problem. The problem is to find the arrangement of N queens on an NxN chess board, such that no queen can attack any other queens on the board. The chess queens can attack in any direction as horizontal, vertical, horizontal and diagonal way. The attacks can also be direct or indirect. 
 ```	
@@ -26,6 +38,7 @@ The subfolder test_files contains all the respective test cases that run before 
 └── main.py
 
 ```
+
 # hill-climbing-search
 
  Hill climbing search is an optimization technique which belongs to category of Informed Search strategy. It is an iterative algorithm that starts with an arbitrary solution to a problem, then attempts to find a better solution by making incremental changes to the solution. If the increment produces a better solution, it proceeds with the incrementing until the best solution is found.
