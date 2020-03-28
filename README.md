@@ -69,9 +69,11 @@ def get_size_input():
 
 The Implementations of our Algorithms are divided as follows:
 We have the ```generate_nxn.py ``` file which is used for generating the initial state of the board. We use the random library in the python modules and use it to generate the NxN board by placing queens in a random fashion, but making sure there is only one queen per column/per row.
-We later use the ```generate_successors``` method to generate the succesor states of the initial generated matrix. Later we evaluate the same generated matrix with the methods that can be found in the ```evaluate.py``` file. The evaluation is done by counting the number of attacks that a Queen is vulnerable to in a *row-wise, column-wise,diagonally as well as in the reverse diagonal* manner. Based on this evaluation we do a Hill Climbing Search to get the next state and repeat the same until a state is acheived where no queens attack each other.
+We later use the ```generate_successors``` method to generate the succesor states of the initial generated matrix. 
+
+Later we evaluate the same generated matrix with the methods that can be found in the ```evaluate.py``` file. The evaluation is done by counting the number of attacks that a Queen is vulnerable to in a *row-wise, column-wise,diagonally as well as in the reverse diagonal* manner. Based on this evaluation we do a Hill Climbing Search to get the next state and repeat the same until a state is acheived where no queens attack each other.
 We also define another method to ```generate_sideways_successors``` board in order to increase the rate of success.
-We also have the Random Restart method in the ```hill_clibing.py``` file. This file contains our main algorithm for performing the hill climbing search. We define a class create a Node and which additionally creates the additional nodes/states.
+We also have the Random Restart method in the ```hill_climbing.py``` file. This file contains our main algorithm for performing the hill climbing search. We define a class create a Node and which additionally creates the additional nodes/states.
 The Random-restart hill climbing as defined in the method ```climb_random_restart``` takes in the number of restarts and the state of the board as the arguments. It is used for conducting a series of hill-climbing searches from randomly generated initial states with the number of restarts limit.
 If it reaches a limit then it means the solution could not be achieved.
 The random restart is again improvised with the ```climb_random_restart_sideways``` move available too.
