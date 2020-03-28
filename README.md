@@ -43,7 +43,7 @@ The steps involved in a Hill Climbing Search is as follows:
 
 In this project, we define few Global Variables that require input from the USER. We first ask the USER, if he wants to run a Evaluation on the 8-QUEENS puzzle or if he wants to run a *Hill Climibing Search* on a single matrix of values. We also let the USER input his own size for which the search has to be performed.
 In the Evaluation, we have a fixed amount of runs, i.e **100** and the number of **sideways_move** as mentioned in the lecture to be limited to **100**. The board size is also fixed to be a 8x8 board with **8 Queens**.
-```
+```python
 def run_evaluation():
 
     amount = 100
@@ -58,16 +58,15 @@ def run_evaluation():
 ```
 The Single run function is as defined below with several parameters that is required as input.
 We get the **size** of the board from USER and also the **number of restarts** that are required to find the solution:
-```
+```python
 def get_size_input():
     size = int(input("What is the size you want to test?:"))
     amount = int(input("How many restarts do you want to have?:"))
     run_hill_climbing_random_restart(1, amount, size)
 ```
 
-
-
 # Hill Climbing Implementation and Procedures
+
 The Implementations of our Algorithms are divided as follows:
 We have the ```generate_nxn.py ``` file which is used for generating the initial state of the board. We use the random library in the python modules and use it to generate the NxN board by placing queens in a random fashion, but making sure there is only one queen per column/per row.
 We later use the ```generate_successors``` method to generate the succesor states of the initial generated matrix. Later we evaluate the same generated matrix with the methods that can be found in the ```evaluate.py``` file. The evaluation is done by counting the number of attacks that a Queen is vulnerable to in a *row-wise, column-wise,diagonally as well as in the reverse diagonal* manner. Based on this evaluation we do a Hill Climbing Search to get the next state and repeat the same until a state is acheived where no queens attack each other.
@@ -287,8 +286,8 @@ Rate of failure:  0.0
 Average steps for success:  411.0
 
 ## Hill Climbing search without Sideways moves for a 8-Queen puzzle
+
 ```
-Run evaluation or run a single size (eval/single)?eval
 Running evaluation for 8-queens problem at, 100 unique cases
 Running 100 case(s) for hill climbing
 Moves for initial state:
@@ -343,7 +342,9 @@ Q - - - - - - -
 - - - - - - Q - 
 - - Q - - - - - 
 - - - - - Q - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 - Q - - - - - - 
 - - - - - - - Q 
@@ -407,7 +408,9 @@ Q - - - - - - -
 - Q - - - - - - 
 - - - - - Q - - 
 - - Q - - - - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 - - - - - - - - 
 - - Q - - Q - Q 
@@ -449,7 +452,9 @@ Q - - - - - - -
 - - - - - - - Q 
 - Q - - - - - - 
 - - - - Q - - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 Q - - Q - - - - 
 - Q - - - - - - 
@@ -502,11 +507,6 @@ Q - - - - - - -
 - - - - Q - - - 
 - Q - - - - - - 
 - - - - - - - Q 
-
-Rate of success:  0.1
-Rate of failure:  0.9
-Average steps for success:  5.3
-Average steps for failure:  4.111111111111111
 ```
 ## Hill Climbing Search with Sideways Moves for a 8-Queen puzzle
 ```
@@ -640,7 +640,9 @@ Q - - - - - - -
 - - - Q - - - - 
 - - - - - - - Q 
 - - Q - - - - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 Q - Q - - - Q - 
 - Q - - Q - - Q 
@@ -1430,7 +1432,9 @@ Q - - - - - - -
 - Q - - - - - - 
 - - - - Q - - - 
 - - Q - - - - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 - - - - - - - - 
 Q - Q - - Q Q - 
@@ -1527,7 +1531,9 @@ Q - - - - - - -
 - - - - Q - - - 
 - - - - - - Q - 
 - Q - - - - - - 
-
+```
+***************************************************************************
+```
 Moves for initial state:
 - - Q - - - - - 
 Q - - - - - - - 
@@ -1976,25 +1982,6 @@ Move:  40
 Q - - - - - - - 
 - - Q - - - - - 
 - - - - - - - Q 
-
-Rate of success:  0.95
-Rate of failure:  0.05
-Average steps for success:  25.389473684210525
-Average steps for failure:  67.2
-Average steps for success sideways:  7.042105263157895
-Running 100 case(s) for random restart move with 25 restarts
-Rate of success:  0.99
-Rate of failure:  0.01
-Average steps for success:  30.939393939393938
-Average steps for failure:  103.0
-Average steps for success restarts:  5.313131313131313
-Running 100 case(s) for random restart move with 25 restarts and sideways moves
-Rate of success:  1.0
-Rate of failure:  0.0
-Average steps for success:  40.19
-Average steps for failure:  Unkown
-Average steps for success sideways:  8.41
-Average steps for success restarts:  0.71
 ```
 # References and Citations:
  - Notes from the Lecture by Prof. Dewan
