@@ -162,10 +162,11 @@ Rate of failure:  0.0
 Average steps for success:  36.163333333333334
 Average steps for failure:  Unknown
 Average steps for success sideways:  6.89
+Average steps for success restarts:  0.57
 ```
 **********************************************************************
 ```
-Average steps for success restarts:  0.57
+
 Running evaluation for 8-queens problem at, 400 unique cases
 Running 400 case(s) for hill climbing
 Rate of success:  0.1125
