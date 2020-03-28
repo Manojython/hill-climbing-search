@@ -43,17 +43,24 @@ def find_random_successor(successors):
     index = random.randint(0, len(successors) - 1)
     return make_node(successors[index])
 
-def climb(problem, limit = 100000):
+def climb(problem, limit = 100000, sideways_limit = 0):
     current = make_node(problem)
+    sideways_moves = 0;
     steps = 0
     moves = []
     while (1):
         steps += 1
         moves += [current.board]
-        neighbor = find_best_successor(
-            generate_successors(current.board))
-        if (neighbor.cost >= current.cost or steps >= limit):
+        neighbor = find_best_successor(generate_successors(current.board))
+        if (neighbor.cost == current.cost):
+            sideways_moves += 1
+
+        if (   neighbor.cost > current.cost 
+            or steps >= limit 
+            or sideways_moves < sideways_limit
+        ):
             return make_final(current.board, steps, moves)
+            
 
         current = neighbor
 
@@ -85,7 +92,7 @@ def climb_outside(
     setattr(final, attribute_count_name, count)
     return final
 
-##### SIDEWAYS #####
+##### SIDEWAYS QUEEN MOVES #####
 def climb_sideways_outside_call(node, amount):
     return climb(
         find_random_successor(
@@ -94,7 +101,7 @@ def climb_sideways_outside_call(node, amount):
         amount
     )
 
-def climb_sideways(problem, sideways_moves):
+def climb_sideways_queen_moves(problem, sideways_moves):
     return climb_outside(
         problem, 
         sideways_moves, 

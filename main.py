@@ -76,7 +76,7 @@ def run_hill_climbing(amount, size):
     cases = []
     for i in range(amount):
         cases.append(climb(generate_initial_state(size)))
-    print_statistics(cases, 4)
+    print_statistics(cases, 0)
 
 def run_hill_climbing_sideways(amount, sideways_amount, size):
     print("Running", amount, "case(s) for sideways move with", sideways_amount, "steps")
@@ -87,7 +87,7 @@ def run_hill_climbing_sideways(amount, sideways_amount, size):
                 generate_initial_state(size),
                 sideways_amount)
             )
-    print_statistics(cases, 4)
+    print_statistics(cases, 0)
 
 def run_hill_climbing_random_restart(amount, restarts, size):
     print("Running", amount, "case(s) for random restart move with", restarts, "restarts")
@@ -113,17 +113,18 @@ def run_hill_climbing_random_restart_sideways(amount, restarts, size):
 
 def run_evaluation():
 
-    amount = 500
+    # amount = 500
     sideways_amount = 25
     restarts = 100
     board_size = 8
-    
-    print("Running evaluation for 8-queens problem at,", amount,"unique cases")
 
-    # run_hill_climbing(amount, board_size)
-    # run_hill_climbing_sideways(amount, sideways_amount, board_size)
-    # run_hill_climbing_random_restart(amount, restarts, board_size)
-    run_hill_climbing_random_restart_sideways(amount, restarts, board_size)
+    for amount in [100, 200, 300, 400, 500]:
+        print("Running evaluation for 8-queens problem at,", amount,"unique cases")
+
+        run_hill_climbing(amount, board_size)
+        run_hill_climbing_sideways(amount, sideways_amount, board_size)
+        run_hill_climbing_random_restart(amount, restarts, board_size)
+        run_hill_climbing_random_restart_sideways(amount, restarts, board_size)
 
 def get_size_input():
     size = int(input("What is the size you want to test?:"))
