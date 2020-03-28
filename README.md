@@ -80,6 +80,38 @@ The random restart is again improvised with the ```climb_random_restart_sideways
 The actual rate of success without sideways move is around 14%.
 Whereas with sideways included, the rate of success increases to 94%
 
+
+
+Below is the results that were obtained with the hill climbing algorithm:
+
+## Hill Climbing Results
+```
+Running 100 cases for hill climbing
+Rate of success:  0.15
+Rate of failure:  0.85
+Average steps for success:  5.0
+Average steps for failure:  3.988235294117647
+```
+## Sideways Move Results
+```
+Running 100 cases for sideways move with 25 steps
+Rate of success:  0.88(This varies with every run, since it is at random)
+Rate of failure:  0.12
+Average steps for success:  22.579545454545453
+Average steps for failure:  65.41666666666667
+```
+## Random Restart Results
+```
+Running 100 cases for random restart move with 25 restarts
+Rate of success:  0.99
+Rate of failure:  0.01
+Average steps for success:  30.363636363636363
+Average steps for failure:  108.0
+```
+
+<!-- Test Cases -->
+# Results:
+
 The number of steps taken for a hill climibing search for 25-Queens and the rate of success is given below:
 
 ```
@@ -114,36 +146,7 @@ Rate of success:  1.0
 Rate of failure:  0.0
 Average steps for success:  411.0
 
-Below is the results that were obtained with the hill climbing algorithm:
-
-## Hill Climbing Results
-```
-Running 100 cases for hill climbing
-Rate of success:  0.15
-Rate of failure:  0.85
-Average steps for success:  5.0
-Average steps for failure:  3.988235294117647
-```
-## Sideways Move Results
-```
-Running 100 cases for sideways move with 25 steps
-Rate of success:  0.88(This varies with every run, since it is at random)
-Rate of failure:  0.12
-Average steps for success:  22.579545454545453
-Average steps for failure:  65.41666666666667
-```
-## Random Restart Results
-```
-Running 100 cases for random restart move with 25 restarts
-Rate of success:  0.99
-Rate of failure:  0.01
-Average steps for success:  30.363636363636363
-Average steps for failure:  108.0
-```
-
-<!-- Test Cases -->
-
-# OUTPUT Currentlys
+## Hill Climbing search without Sideways moves for a 8-Queen puzzle
 ```
 Run evaluation or run a single size (eval/single)?eval
 Running evaluation for 8-queens problem at, 100 unique cases
@@ -364,6 +367,9 @@ Rate of success:  0.1
 Rate of failure:  0.9
 Average steps for success:  5.3
 Average steps for failure:  4.111111111111111
+```
+## Hill Climbing Search with Sideways Moves for a 8-Queen puzzle
+```
 Running 100 case(s) for sideways move with 25 steps
 Moves for initial state:
 - Q - - - Q - - 
