@@ -81,7 +81,7 @@ The actual rate of success without sideways move is around 14%.
 Whereas with sideways included, the rate of success increases to 94%
 
 # Analysis:
-
+```
 Running evaluation for 8-queens problem at, 100 unique cases
 Running 100 case(s) for hill climbing
 Rate of success:  0.11
@@ -107,7 +107,9 @@ Average steps for success:  33.6
 Average steps for failure:  Unknown
 Average steps for success sideways:  6.08
 Average steps for success restarts:  0.44
+```
 **********************************************************************
+```
 Running evaluation for 8-queens problem at, 200 unique cases
 Running 200 case(s) for hill climbing
 Rate of success:  0.19
@@ -133,7 +135,9 @@ Average steps for success:  35.735
 Average steps for failure:  Unknown
 Average steps for success sideways:  6.915
 Average steps for success restarts:  0.535
+```
 **********************************************************************
+```
 Running evaluation for 8-queens problem at, 300 unique cases
 Running 300 case(s) for hill climbing
 Rate of success:  0.18333333333333332
@@ -158,7 +162,9 @@ Rate of failure:  0.0
 Average steps for success:  36.163333333333334
 Average steps for failure:  Unknown
 Average steps for success sideways:  6.89
+```
 **********************************************************************
+```
 Average steps for success restarts:  0.57
 Running evaluation for 8-queens problem at, 400 unique cases
 Running 400 case(s) for hill climbing
@@ -185,7 +191,9 @@ Average steps for success:  36.99
 Average steps for failure:  Unknown
 Average steps for success sideways:  7.155
 Average steps for success restarts:  0.58
+```
 **********************************************************************
+```
 Running evaluation for 8-queens problem at, 500 unique cases
 Running 500 case(s) for hill climbing
 Rate of success:  0.132
@@ -211,6 +219,7 @@ Average steps for success:  36.072
 Average steps for failure:  Unknown
 Average steps for success sideways:  6.824
 Average steps for success restarts:  0.554
+```
 
 Below is the results that were obtained with the hill climbing algorithm:
 
